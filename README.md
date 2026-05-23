@@ -158,13 +158,13 @@ Lihat file [TESTING.md](TESTING.md) atau bagian **Testing Checklist** di dokumen
 
 ## 📄 Lisensi
 
-Proyek ini dilisensikan di bawah lisensi **MIT**. Silakan gunakan, modifikasi, dan distribusikan secara bebas. Lihat [LICENSE](LICENSE) untuk detail.
+Proyek ini dilisensikan di bawah lisensi **MIT**. Silakan gunakan, modifikasi, dan distribusikan secara bebas. Lihat [LICENSE](LICENSE.md) untuk detail.
 
 ---
 
 ## 💬 Umpan Balik & Kontribusi
 
-Punya ide, bug, atau ingin berkontribusi? Silakan buka [Issues](https://github.com/username/umkm-erp-lite/issues) atau kirim Pull Request. Semua masukan sangat dihargai!
+Punya ide, bug, atau ingin berkontribusi? Silakan buka [Issues](https://github.com/faizabdillahh/umkm-erp-lite/issues) atau kirim Pull Request. Semua masukan sangat dihargai!
 
 ---
 
