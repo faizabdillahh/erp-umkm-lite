@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMKM ERP Lite</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/print.css" media="print">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Sidebar navigasi -->
+        <nav id="sidebar" class="sidebar" aria-label="Navigasi utama">
+            <div class="sidebar__brand">
+                <span class="sidebar__logo" aria-hidden="true">🏪</span>
+                <span class="sidebar__title">UMKM ERP</span>
+            </div>
+            <ul class="sidebar__menu" role="menubar">
+                <li role="none"><a href="#/" class="sidebar__link" role="menuitem" data-nav="dashboard">📊 Dashboard</a>
+                </li>
+                <li role="none"><a href="#/penjualan" class="sidebar__link" role="menuitem" data-nav="penjualan">💰
+                        Penjualan</a></li>
+                <li role="none"><a href="#/pembelian" class="sidebar__link" role="menuitem" data-nav="pembelian">📦
+                        Pembelian</a></li>
+                <li role="none"><a href="#/produk" class="sidebar__link" role="menuitem" data-nav="produk">🏷️
+                        Produk</a></li>
+                <li role="none"><a href="#/persediaan" class="sidebar__link" role="menuitem" data-nav="persediaan">📋
+                        Persediaan</a></li>
+                <li role="none"><a href="#/pelanggan" class="sidebar__link" role="menuitem" data-nav="pelanggan">👥
+                        Pelanggan</a></li>
+                <li role="none"><a href="#/supplier" class="sidebar__link" role="menuitem" data-nav="supplier">🏭
+                        Supplier</a></li>
+                <li role="none"><a href="#/keuangan" class="sidebar__link" role="menuitem" data-nav="keuangan">💵
+                        Keuangan</a></li>
+                <li role="none"><a href="#/marketing" class="sidebar__link" role="menuitem" data-nav="marketing">📢
+                        Marketing</a></li>
+                <li role="none"><a href="#/sdm" class="sidebar__link" role="menuitem" data-nav="sdm">👤 SDM</a></li>
+                <li role="none"><a href="#/produksi" class="sidebar__link" role="menuitem" data-nav="produksi">⚙️
+                        Produksi</a></li>
+                <li role="none"><a href="#/operasional" class="sidebar__link" role="menuitem" data-nav="operasional">📅
+                        Operasional</a></li>
+                <li role="none"><a href="#/analitik" class="sidebar__link" role="menuitem" data-nav="analitik">📈
+                        Analitik</a></li>
+                <li role="none"><a href="#/dokumen" class="sidebar__link" role="menuitem" data-nav="dokumen">📄
+                        Dokumen</a></li>
+                <li role="none"><a href="#/pengaturan" class="sidebar__link" role="menuitem" data-nav="pengaturan">⚙️
+                        Pengaturan</a></li>
+                <li role="none"><a href="#/backup" class="sidebar__link" role="menuitem" data-nav="backup">💾 Backup</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Konten utama -->
+        <main id="main-content" class="main-content" tabindex="-1">
+            <!-- Diisi oleh router -->
+        </main>
+
+        <!-- Container toast notifikasi -->
+        <div id="toast-container" class="toast-container" role="status" aria-live="polite" aria-atomic="true"></div>
+
+        <!-- Modal overlay -->
+        <div id="modal-overlay" class="modal-overlay" hidden aria-modal="true" role="dialog">
+            <div class="modal" id="modal-box">
+                <div class="modal__header">
+                    <h2 class="modal__title" id="modal-title"></h2>
+                    <button class="modal__close" aria-label="Tutup modal" id="modal-close-btn">&times;</button>
+                </div>
+                <div class="modal__body" id="modal-body"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core -->
+    <script src="assets/js/core/db.js"></script>
+    <script src="assets/js/core/eventbus.js"></script>
+    <script src="assets/js/core/state.js"></script>
+    <script src="assets/js/core/utils.js"></script>
+    <script src="assets/js/services/calc.js"></script>
+
+    <!-- Modules -->
+    <script src="assets/js/modules/dashboard.js"></script>
+    <script src="assets/js/modules/master-data.js"></script>
+    <script src="assets/js/modules/penjualan.js"></script>
+    <script src="assets/js/modules/pembelian.js"></script>
+    <script src="assets/js/modules/produk.js"></script>
+    <script src="assets/js/modules/pelanggan.js"></script>
+    <script src="assets/js/modules/supplier.js"></script>
+    <script src="assets/js/modules/persediaan.js"></script>
+    <script src="assets/js/modules/keuangan.js"></script>
+    <script src="assets/js/modules/marketing.js"></script>
+    <script src="assets/js/modules/sdm.js"></script>
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
+    <script src="assets/js/modules/backup.js"></script>
+    <script src="assets/js/modules/pengaturan.js"></script>
+    <script src="assets/js/modules/produksi.js"></script>
+    <script src="assets/js/modules/operasional.js"></script>
+    <script src="assets/js/modules/analitik.js"></script>
+    <script src="assets/js/modules/dokumen.js"></script>
+
+    <!-- Router & App -->
+    <script src="assets/js/core/router.js"></script>
+    <script src="assets/js/core/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,224 @@
+/* ============================================================
+   DASHBOARD.CSS — Layout Dashboard & KPI Cards
+   ============================================================ */
+
+@layer dashboard {
+  /* ─── Dashboard Container ───────────────────────────────── */
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+
+  .dashboard__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  .dashboard__title {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+  }
+
+  .dashboard__period-selector {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  /* ─── KPI Grid ──────────────────────────────────────────── */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: var(--space-4);
+  }
+
+  /* ─── KPI Card ──────────────────────────────────────────── */
+  .kpi-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+    container-type: inline-size;
+  }
+
+  .kpi-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  .kpi-card__icon {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    background-color: var(--color-bg);
+  }
+
+  .kpi-card__icon--green  { background-color: rgba(26,107,60,0.1); color: var(--color-primary); }
+  .kpi-card__icon--blue   { background-color: rgba(12,99,228,0.1); color: var(--color-info); }
+  .kpi-card__icon--orange { background-color: rgba(245,166,35,0.1); color: var(--color-accent); }
+  .kpi-card__icon--red    { background-color: rgba(217,48,37,0.1); color: var(--color-danger); }
+  .kpi-card__icon--purple { background-color: rgba(111,66,193,0.1); color: #6f42c1; }
+
+  .kpi-card__body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .kpi-card__label {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    margin-bottom: var(--space-1);
+  }
+
+  .kpi-card__value {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-text);
+    font-variant-numeric: tabular-nums;
+    line-height: var(--line-height-tight);
+  }
+
+  .kpi-card__change {
+    font-size: var(--font-size-xs);
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    margin-top: var(--space-1);
+  }
+
+  .kpi-card__change--up   { color: var(--color-success); }
+  .kpi-card__change--down { color: var(--color-danger); }
+
+  /* ─── Dashboard Section (Baris grafik) ────────────────────── */
+  .dashboard__charts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--space-4);
+  }
+
+  .chart-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .chart-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-3);
+  }
+
+  .chart-card__title {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+  }
+
+  .chart-card__body {
+    position: relative;
+    min-height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Placeholder grafik (sebelum implementasi Canvas/SVG) */
+  .chart-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 220px;
+    border: 2px dashed var(--color-border);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    background-color: var(--color-bg);
+  }
+
+  .chart-placeholder__icon {
+    font-size: 2.5rem;
+    opacity: 0.5;
+  }
+
+  /* ─── Quick Action Buttons di Dashboard ──────────────────── */
+  .quick-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  .quick-action-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-4);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: background-color var(--transition-fast), border-color var(--transition-fast);
+  }
+
+  .quick-action-btn:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+  }
+
+  /* ─── Responsive Dashboard ─────────────────────────────── */
+  @media (max-width: 767px) {
+    .kpi-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-2);
+    }
+
+    .kpi-card {
+      padding: var(--space-3);
+      gap: var(--space-2);
+    }
+
+    .kpi-card__value {
+      font-size: var(--font-size-lg);
+    }
+
+    .dashboard__charts {
+      grid-template-columns: 1fr;
+    }
+
+    .chart-card__body {
+      min-height: 200px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .kpi-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}
